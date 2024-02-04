@@ -5,7 +5,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "build": "npm i",
+    "debug": "ndb server.js"
+  
   },
   "keywords": [],
   "author": "",
