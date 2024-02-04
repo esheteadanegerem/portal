@@ -16,7 +16,7 @@ const News = () => {
   useEffect(() => {
     // Fetch data when the component mounts
     
-    axios.get('http://localhost:5001/news')
+    axios.get('https://mintportalentry.onrender.com/news')
       .then(response => {
         const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
         console.log(parsedData.date)

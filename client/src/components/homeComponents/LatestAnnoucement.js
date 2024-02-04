@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './home.css';
 
@@ -12,7 +12,7 @@ const LatestAnnouncement = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/announcements/fetchCalls")
+      .get("https://mintportalentry.onrender.com/announcements/fetchCalls")
       .then(result => {
         const calls = result.data;
 

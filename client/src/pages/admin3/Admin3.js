@@ -13,7 +13,7 @@ function Admin2() {
 
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.get('http://localhost:5001/admind3/dashboard') // Update the route path here
+    axios.get('https://mintportalentry.onrender.com/admind3/dashboard') // Update the route path here
       .then((result) => {
         console.log(result)
         if (result.data === 'ok') {

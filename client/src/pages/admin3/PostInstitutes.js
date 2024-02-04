@@ -21,7 +21,7 @@ function PostInstitutes() {
 
   });
 
-  const defaultImageURL = 'http://localhost:5001/images/noimage.png'
+  const defaultImageURL = 'https://mintportalentry.onrender.com/images/noimage.png'
   const [imagePreview, setImagePreview] = useState(defaultImageURL);
   
 
@@ -107,7 +107,7 @@ function PostInstitutes() {
      
 
       try {
-        const response = axios.post('http://localhost:5001/admin/institutes/post-to-institutes', data);
+        const response = axios.post('https://mintportalentry.onrender.com/admin/institutes/post-to-institutes', data);
         console.log(response.data);
           alert('Do you want to submit')
           toast.info('Institutes form submitted successfully!');

@@ -8,7 +8,7 @@ const Logout = () => {
   useEffect(() => {
     const logoutUser = async () => {
       try {
-        const response = await axios.post('http://localhost:5001/authlog/logout');
+        const response = await axios.post('https://mintportalentry.onrender.com/authlog/logout');
         console.log('Response from logout:', response.data);
 
         if (response.data === 'tokendeleted') {

@@ -12,7 +12,7 @@ function SetAppointmentDate() {
   const[loaded, setLoaded] = useState(false);
   useEffect(
     function(){
-      axios.get('http://localhost:5001/admin/appointment/getAll')
+      axios.get('https://mintportalentry.onrender.com/admin/appointment/getAll')
       .then((result)=>{
         setProjects(result.data);
         //console.log(result);
@@ -52,7 +52,7 @@ function updateStatus(id){
   const dateInput = document.getElementById(id);
   const newDate = new Date(dateInput.value).toISOString(); 
   console.log(newDate);
-  axios.get('http://localhost:5001/admin/appointment/setAppointment_'+id+"_"+newDate)
+  axios.get('https://mintportalentry.onrender.com/admin/appointment/setAppointment_'+id+"_"+newDate)
   .then((result)=>{
     console.log(result);
     if(result.data==="Already set"){

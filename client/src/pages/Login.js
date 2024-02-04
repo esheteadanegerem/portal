@@ -17,7 +17,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:5001/authl/login', { email, password })
+      .post('https://mintportalentry.onrender.com/authl/login', { email, password })
       .then((result) => {
         console.log(result.data);
         if (result.data.message === 'ok') {

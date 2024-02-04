@@ -48,7 +48,7 @@ function AddAdmin() {
     
       if (password === confirmPassword && password.length >= 8 && /(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&*!.])[A-Za-z\d@#$%^&*!.]{8,}/.test(password)) {
         axios
-          .post("http://localhost:5001/auth/register2", {
+          .post("https://mintportalentry.onrender.com/auth/register2", {
             fName,
             LName,
             password,

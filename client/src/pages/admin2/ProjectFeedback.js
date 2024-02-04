@@ -15,7 +15,7 @@ function ProjectFeedback() {
   console.log(email);
   useEffect(
     function(){
-      axios.get('http://localhost:5001/admin/userStatus/getAll')
+      axios.get('https://mintportalentry.onrender.com/admin/userStatus/getAll')
       .then((result)=>{
         setProjects(result.data);
         //console.log(result);
@@ -182,7 +182,7 @@ function updateStatus(id, newStatus, title){
   const feedback2 = document.getElementById(id+'-quality').value;
   //console.log(title);
   const feedback = newStatus + "-" + feedback2 + "-" + feedback1;
-  axios.post('http://localhost:5001/admin2Feedback/setFeedback', {id: id, email: email, title: title, feedback: feedback})
+  axios.post('https://mintportalentry.onrender.com/admin2Feedback/setFeedback', {id: id, email: email, title: title, feedback: feedback})
   .then(result=>console.log(result))
   .catch(err=>console.log(err));
   window.location.reload(false);

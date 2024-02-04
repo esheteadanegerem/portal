@@ -14,7 +14,7 @@ function ViewCommitteeReports() {
     const [reports, setReports] = useState([]);
     const [loaded, setLoaded] = useState(false);
     useEffect(function(){
-        axios.get('http://localhost:5001/admin2Reports/getAll')
+        axios.get('https://mintportalentry.onrender.com/admin2Reports/getAll')
         .then((result)=>{setReports(result.data); console.log(result)})
         .catch(err=>console.log(err))
         setLoaded(true);

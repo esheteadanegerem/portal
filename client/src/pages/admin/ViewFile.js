@@ -12,7 +12,7 @@ function ViewFile(){
         <br />
         <iframe
         title="teb"
-              src={'http:\\\\localhost:5001\\'+filePath}
+              src={'https:\\\\mintportalentry.onrender.com\\'+filePath}     
               style={{width:"100%"}}
               height={800}
         />

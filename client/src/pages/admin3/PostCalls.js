@@ -21,7 +21,7 @@ const navigate=useNavigate()
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:5001/announcements/addCall", {
+      .post("https://mintportalentry.onrender.com/announcements/addCall", {
         title,
         description,
         field,

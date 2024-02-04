@@ -33,7 +33,7 @@ const NewsAnnouncementsPublications = () => {
   useEffect(() => {
     // Fetch news
     axios
-      .get('http://localhost:5001/news')
+      .get('https://mintportalentry.onrender.com/news')
       .then((response) => {
         const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
         const sortedNews = parsedData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -46,7 +46,7 @@ const NewsAnnouncementsPublications = () => {
 
     // Fetch announcements
     axios
-      .get('http://localhost:5001/resources/announcements')
+      .get('https://mintportalentry.onrender.com/resources/announcements')
       .then((response) => {
         const recentAnnouncement = response.data.length > 0 ? response.data[0].title : '';
         setLatestAnnouncement(recentAnnouncement);
@@ -57,7 +57,7 @@ const NewsAnnouncementsPublications = () => {
 
     // Fetch publications
     axios
-      .get('http://localhost:5001/resources/publications')
+      .get('https://mintportalentry.onrender.com/resources/publications')
       .then((response) => {
         const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
         const sortedPublications = parsedData.sort((a, b) => new Date(a.date) - new Date(b.date));

@@ -60,7 +60,7 @@ function SetAppointmentDate() {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-    //  const emailResponse = await axios.post('http://localhost:5001/admin/appointments/add-appointment');
+    //  const emailResponse = await axios.post('https://mintportalentry.onrender.com/admin/appointments/add-appointment');
       dispatch(setAppointment(formData));
     
   };

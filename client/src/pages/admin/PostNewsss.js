@@ -20,7 +20,7 @@ function Post_News() {
 
   });
 
-  const defaultImageURL = 'http://localhost:5001/images/noimage.png'
+  const defaultImageURL = 'https://mintportalentry.onrender.com/images/noimage.png'
   const [imagePreview, setImagePreview] = useState(defaultImageURL);
   
 
@@ -76,7 +76,7 @@ function Post_News() {
       
 
       try {
-        const response = await axios.post('http://localhost:5001/admin/news/add-news', data);
+        const response = await axios.post('https://mintportalentry.onrender.com/admin/news/add-news', data);
         console.log(formattedDate); // Output: 11/13/2023 (or a date format specific to your locale)
 
         console.log(response.data);
