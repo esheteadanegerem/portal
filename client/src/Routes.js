@@ -2,7 +2,7 @@
 // src/Routes.js
 import React from 'react';
 import Logout from './components/Logout.js';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Announcements from './pages/Announcements';
@@ -65,7 +65,7 @@ import CheckStatus from './pages/user/CheckStatus';
 
 
 const ConditionalNavbar = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const path = window.location.pathname;
 
   // Check if the path is for Login or Register
@@ -94,8 +94,6 @@ const ConditionalNavbar = () => {
 
 
 const ConditionalFooter = () => {
-  const navigate = useNavigate();
-  const path = window.location.pathname;
 
   // if (path === '/login' || path === '/register') {
   //   return null; // Render nothing for Login and Register pages
