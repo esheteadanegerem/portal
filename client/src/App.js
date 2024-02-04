@@ -1,7 +1,7 @@
 // src/App.js
-import React, {useEffect} from 'react';
-import { useDispatch } from 'react-redux';
-import {getNews} from './actions/news'
+import React from 'react';
+// import { useDispatch } from 'react-redux';
+// import {getNews} from './actions/news'
 import './App.css';
 import RoutesComponent from './Routes';
 
