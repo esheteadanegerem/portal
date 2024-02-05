@@ -18,7 +18,7 @@ import { useState,useEffect } from 'react'
 const ProtectAdmin = () => {
     const[role,setdata]=useState('')
     useEffect(()=>{
-        axios.get('http://localhost:5001/authl/protect')
+        axios.get('https://mintportalentry.onrender.com/authl/protect')
         .then(result=>{
             // console.log(result.data)
             setdata(result.data)})
