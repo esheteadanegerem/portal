@@ -20,7 +20,8 @@ router.post('/add-footer', async(req, res) => {
     } else{
        const { fullName, email, message,  } = req.body; 
       
-      const serverUrl = 'http://localhost:5001';
+      //const serverUrl = 'http://localhost:5001';
+      const serverUrl='https://mintportalentry.onrender.com'
       
       try {
           const newFooter =  new Footer({

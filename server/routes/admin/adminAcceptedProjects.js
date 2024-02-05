@@ -51,7 +51,8 @@ router.post('/add-accepted-project',(req, res) => {
        console.log(imagePath) }
 
 
-      const serverUrl = 'http://localhost:5001'; // Replace this with your server URL
+      //const serverUrl = 'http://localhost:5001'; 
+      const serverUrl='https://mintportalentry.onrender.com'
 
       // Process image path
       const partsImage = imagePath.split('public\\');

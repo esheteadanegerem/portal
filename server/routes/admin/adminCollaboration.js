@@ -67,8 +67,8 @@ router.post('/post-to-collaboration',Verify, (req, res) => {
       if (req.file){ imagePath = req.file.path; 
       console.log(imagePath)  }
          
-      const serverUrl = 'http://localhost:5001'; // Replace this with your server URL
-      
+      //const serverUrl = 'http://localhost:5001'; // Replace this with your server URL
+      const serverUrl='https://mintportalentry.onrender.com'
       //   Remove 'public' from the path
       const parts = imagePath.split('public\\');
       const cleanImagePath = parts.join('');
