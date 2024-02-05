@@ -70,8 +70,7 @@ main()
 //user routes
 app.use('/auth/:page',register)
 app.use('/announcements/:page', announcementPost);
-app.use('/authl',login)
-app.use('authl',ProtectAdmin)
+app.use('/authl',login,ProtectAdmin)
 app.use('/admind',dashboardRoute)
 app.use('/admind2',dashboardRoute2)
 app.use('/admind3',dashboardRoute3)
