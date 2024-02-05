@@ -33,7 +33,7 @@ ProtectAdmin.get('/protect', verifyToken, (req, res) => {
   const decoded = req.decoded; 
 
   if (decoded) {
-   // console.log('User role:', decoded.role);
+   console.log('User role:', decoded.role);
     res.json( decoded.role);
   } else {
     console.log('No decoded information available');
