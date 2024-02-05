@@ -20,7 +20,7 @@ const ProtectAdmin = () => {
     useEffect(()=>{
         axios.get('https://mintportalentry.onrender.com/authl/protect')
         .then(result=>{
-            // console.log(result.data)
+          console.log(result.data)
             setdata(result.data)})
         .catch(error=>{console.log(error)});
     },[])
