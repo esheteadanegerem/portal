@@ -49,7 +49,6 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
   origin: "https://innovationportal.netlify.app",
-  methods: ['GET', 'POST',"PUT"],
   credentials: true
 }));
 app.use(express.static(path.join('./', 'public')));

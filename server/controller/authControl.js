@@ -64,7 +64,8 @@ const register = async (req, res) => {
       });
      
       const token = jwt.sign({ user: newUser }, SECRET_KEY, { expiresIn: '1h' });
-      res.cookie('token', token, { httpOnly: true }); 
+res.cookie('token', token, { httpOnly: true, secure: true });
+
       
       res.json('Userregistered' );
     } catch (error) {
@@ -172,16 +173,7 @@ else if (req.params.page === "submitProject") {
         }
         console.log("TeamMember1: " + teamMembers1);
         const nowDate = new Date(Date.now()).toISOString();
-        // console.log(cvPath);
-        // console.log(proposalPath);
-        // await ProjectModel.updateMany( {},{ $set: { email : 'emnetmk@gmail.com'} }, { multi: true });
-        // await ProjectModel.updateMany( {},{ $set: { hostInstitution : "Addis Ababa University"} }, { multi: true });
-        // await ProjectModel.updateMany( {},{ $set: { proposalPath2 : "uploads\\1701198466688.pdf"} }, { multi: true });
-        // await ProjectModel.updateMany( {},{ $set: { presentationPath : "uploads\\1701198466688.pdf"} }, { multi: true });
-        // await ProjectModel.updateMany( {},{ $set: { proposalPath3 : "uploads\\1701198466688.pdf"} }, { multi: true });
-        // await ProjectModel.updateMany( {},{ $set: { grantedDate : nowDate} }, { multi: true });
-        //console.log(email1);
-        // const data={projectTitle:projectTitle,teamMembers:teamMembers,projectCategory:projectCategory,description:description,cvPath:cvPath,proposalPath:proposalPath}
+       
         Title=await ProjectModel.find({Title:projectTitle});
         if(Title.length>0){
           res.json('titlepresent')
