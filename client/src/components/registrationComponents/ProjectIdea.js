@@ -17,7 +17,7 @@ const ProjectIdea = ({ nextStep, prevStep }) => {
   const [email, setEmail] = useState("");
   const [institute, setInstitute] = useState("");
 
-  const MAX_FILE_SIZE = 3 * 1024 * 1024*1024; // 3MB in bytes
+  const MAX_FILE_SIZE = 3 * 1024 * 1024; // 3MB in bytes
 
   const handleCVFileChange = (e) => {
     const file = e.target.files[0];
@@ -76,7 +76,6 @@ const ProjectIdea = ({ nextStep, prevStep }) => {
     if (letter) {
       formData.append("letter", letter);
     }
-    console.log(formData)
     try {
       const response = await axios.put(
         "https://mintportalentry.onrender.com/auth/submitProject",
@@ -207,13 +206,13 @@ const ProjectIdea = ({ nextStep, prevStep }) => {
                 <option value="Other related Sectors">
                   Other related Sectors
                 </option>
-                {/* <option value="Agriculture">Agriculture</option> */}
+                <option value="Agriculture">Agriculture</option>
                 <option value="Environment_Energy">
                   Environment and Energy
                 </option>
-                {/* <option value="Health">Health</option>
-                <option value="Industry">Industry</option> */}
-                {/* <option value="Other">Other</option> */}
+                <option value="Health">Health</option>
+                <option value="Industry">Industry</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
