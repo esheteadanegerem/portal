@@ -74,6 +74,7 @@ const register = async (req, res) => {
   }
 
   if (req.params.page === "register2") {
+    console.log(req.body)
     const { fName, LName, password, email, phone, country, address, sex, adminType } = req.body;
     try {
       user = await UserModel.find({ email: email }); // Assign user

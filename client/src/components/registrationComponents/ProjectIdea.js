@@ -76,6 +76,7 @@ const ProjectIdea = ({ nextStep, prevStep }) => {
     if (letter) {
       formData.append("letter", letter);
     }
+    console.log(formData)
     try {
       const response = await axios.put(
         "https://mintportalentry.onrender.com/auth/submitProject",
