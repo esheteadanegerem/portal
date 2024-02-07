@@ -132,12 +132,12 @@ else if (req.params.page === "submitProject") {
   const upload = multer({ storage });
 
   try {
-    verifyToken(req, res, async () => {
-      const User = await req.user;
-    console.log(User);
-      if (!User) {
-        return res.json({ message: 'User not found. Please register or log in.' });
-      }
+    // verifyToken(req, res, async () => {
+    //   const User = await req.user;
+    // console.log(User);
+    //   if (!User) {
+    //     return res.json({ message: 'User not found. Please register or log in.' });
+    //   }
       upload.fields([
         { name: 'cvFile', maxCount: 1 },
         { name: 'proposalFile', maxCount: 2 },
@@ -215,7 +215,7 @@ else if (req.params.page === "submitProject") {
         
        
       });
-    });
+    // });
   } catch (error) { 
     return res.json({ message: 'Error occurred during project idea submission: ' + error });
   }
