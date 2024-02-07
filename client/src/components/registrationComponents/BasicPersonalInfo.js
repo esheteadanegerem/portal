@@ -43,7 +43,7 @@ const BasicPersonalInfo = ({ nextStep}) => {
   
     if (password === confirmPassword && password.length >= 8 && /(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&*!.])[A-Za-z\d@#$%^&*!.]{8,}/.test(password)) {
       axios
-        .post("https://mintportalentry.onrender.com/auth/register2", {
+        .post("https://mintportalentry.onrender.com/auth/register", {
           fName,
           LName,
           password,

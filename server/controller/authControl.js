@@ -101,9 +101,8 @@ const register = async (req, res) => {
         role: adminType
       });
      
-      const token = jwt.sign({ user: newUser }, SECRET_KEY, { expiresIn: '1h' });
-      console.log('from registeration',token)
-      res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
+      const token = jwt.sign({ user: newUser }, SECRET_KEY, { expiresIn: '4h' });
+      res.cookie('token', token, { httpOnly: true }); 
 
       
       res.json('Userregistered' );
