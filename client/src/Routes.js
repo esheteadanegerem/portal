@@ -157,7 +157,7 @@ const RoutesComponent = () => {
  
     
       <Routes>
-       <Route >
+       <Route element={<ProtectAdmin/>}>
         <Route path='/admin' element = {<Layout />}>
           <Route  index element= {<Admin/>}/>
           <Route path='appointments/add-appointment' element={<SetAppointmentDate/>}/>
