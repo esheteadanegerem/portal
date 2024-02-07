@@ -102,7 +102,8 @@ const register = async (req, res) => {
       });
      
       const token = jwt.sign({ user: newUser }, SECRET_KEY, { expiresIn: '1h' });
-      res.cookie('token', token,{ httpOnly: true,secure:true  }); 
+      res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
+
       
       res.json('Userregistered' );
     } catch (error) {
